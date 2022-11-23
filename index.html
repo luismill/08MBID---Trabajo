@@ -1,15 +1,28 @@
-
+08MBID-Visualización de Datos: Trabajo Práctico <br>
 Nombre: Luis Millán <br>
 URL: <a href="https://js-g9ry94.stackblitz.io/">https://js-g9ry94.stackblitz.io/</a><br>
 GitHub: <a href="https://github.com/luismill/08MBID---Trabajo">https://github.com/luismill/08MBID---Trabajo</a><br>
 
+<h1>¿Cómo son las películas mejor valoradas? </h1>
+<h2>Introducción </h2>
+Este trabajo tiene como objetivo responder a la pregunta de qué características tienen las películas mejor valoradas por los usuarios. Se presentan 3 visualizaciones que ayudan a entender qué tipo de películas son más apreciadas. Para ello, se han utilizado dos bases de datos, provenientes de los portales de internet especializados en cine IMDB y TMDB. Estas bases de datos se han obtnido de las siguientes páginas:<br>
+IMDB: <a href="https://www.imdb.com/interfaces">https://www.imdb.com/interfaces</a><br>
+TMDB: <a href="https://www.kaggle.com/datasets/akshaypawar7/millions-of-movies">https://www.kaggle.com/datasets/akshaypawar7/millions-of-movies</a><br>
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6xAPPryeEnT1miVh9612tlWfcAnQyxHyS4QBO8zzF-2qFyKuOb4LWK9MZ6mcAvAtbo4N30hF6E-Hf/pubchart?oid=1343659239&amp;format=interactive"></iframe>
+Las visualizaciones de este trabajo están pensadas para un público general a modo de curiosidad. Se podrían incluir en algún reportaje de un periódico o de alguna revista cultural. La tercera visualización, sin embargo, tendría que explicarse con más detalle al tratarse de un boxplot y para entenderlo se necesitan unos pocos conocimientos de estadística. <br>
 
+<h2>Visualizaciones </h2>
+El primer gráfico muestra la valoración de las películas según su género. Se representa la valoración media de las películas para cada género. Para facilitar la comparación entre géneros, he optado por emplear un gráfico de barras y las he ordenado en sentido descendente según su valoración. Adicionalmente, he añadido la valoración media de todas las películas que sirva como referencia. Para destacar y diferenciar este valor, le he dado otro color (verde), dejando el resto en azul. Por último, he añadido las etiquetas con las puntuaciones de cada uno, ya que estamos muy acostumbrados a valorar las cosas de 0 a 10, y el valor númerico nos ayuda también a comparar categorías que tienen notas parecidas. Durante el procesamiento de datos, se eliminaron los géneros menos importantes para no saturar el gráfico. <br>
+Este gráfico se ha realizado con Google Sheet.<br>
 
+<iframe width="900" height="550" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6xAPPryeEnT1miVh9612tlWfcAnQyxHyS4QBO8zzF-2qFyKuOb4LWK9MZ6mcAvAtbo4N30hF6E-Hf/pubchart?oid=1343659239&amp;format=interactive"></iframe><br>
+
+La segunda visualización es un diagrama de puntos para representar la nota media de las películas a lo largo del tiempo. Se representa en un punto la nota media de las películas del año correspondiente y se ordenan cronologicamente. No he incluido líneas entre los puntos, ya que en principio no hay ninguna conexión entre las películas de un año y el siguiente, aunque al ver todos los puntos se pueda intuir una tendencia. Al ser el rango de notas muy pequeño, en este caso he optado por acortar la escala del eje y, para permitir la comparación entre los valores de los distintos años. Para aportar más información, el tamaño del punto es proporcional al número de películas de ese año, que ayuda también a valorar mejor las notas. El gráfico es interactivo, por lo que al pasar el cursor por cada punto, se indica también la película mejor valorada ese año y su nota. <br>
+Este gráfico se ha realizado con DataWrapper.<br>
 <iframe title="Valoración media de las películas por año" aria-label="Scatter Plot" id="datawrapper-chart-LpjDI" src="https://datawrapper.dwcdn.net/LpjDI/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="375" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
-</script>
+</script><br>
 
 Para ver en el navegador: <a href="https://datawrapper.dwcdn.net/LpjDI/2/">https://datawrapper.dwcdn.net/LpjDI/2/</a><br>
+
 
 
