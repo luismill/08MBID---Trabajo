@@ -2,6 +2,7 @@
 Nombre: Luis Millán <br>
 URL: <a href="https://js-g9ry94.stackblitz.io/">https://js-g9ry94.stackblitz.io/</a><br>
 GitHub: <a href="https://github.com/luismill/08MBID---Trabajo">https://github.com/luismill/08MBID---Trabajo</a><br>
+Cuaderno Google Colab para procesmiento y último gráfico: <a href="https://drive.google.com/file/d/1WCdd95mswaDMYs_XGTpyQQlKgJ3l8c7N/view?usp=sharing">https://drive.google.com/file/d/1WCdd95mswaDMYs_XGTpyQQlKgJ3l8c7N/view?usp=sharing</a><br>
 
 <h1>¿Cómo son las películas mejor valoradas? </h1>
 <h2>Introducción </h2>
@@ -17,12 +18,22 @@ Este gráfico se ha realizado con Google Sheet.<br>
 
 <iframe width="900" height="550" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6xAPPryeEnT1miVh9612tlWfcAnQyxHyS4QBO8zzF-2qFyKuOb4LWK9MZ6mcAvAtbo4N30hF6E-Hf/pubchart?oid=1343659239&amp;format=interactive"></iframe><br>
 
-La segunda visualización es un diagrama de puntos para representar la nota media de las películas a lo largo del tiempo. Se representa en un punto la nota media de las películas del año correspondiente y se ordenan cronologicamente. No he incluido líneas entre los puntos, ya que en principio no hay ninguna conexión entre las películas de un año y el siguiente, aunque al ver todos los puntos se pueda intuir una tendencia. Al ser el rango de notas muy pequeño, en este caso he optado por acortar la escala del eje y, para permitir la comparación entre los valores de los distintos años. Para aportar más información, el tamaño del punto es proporcional al número de películas de ese año, que ayuda también a valorar mejor las notas. El gráfico es interactivo, por lo que al pasar el cursor por cada punto, se indica también la película mejor valorada ese año y su nota. <br>
+La segunda visualización es un diagrama de puntos para representar la nota media de las películas a lo largo del tiempo. Se representa en un punto la nota media de las películas del año correspondiente y se ordenan cronologicamente. No he incluido líneas entre los puntos, ya que en principio no hay ninguna conexión entre las películas de un año y el siguiente, aunque al ver todos los puntos se pueda intuir una tendencia. Al ser el rango de notas muy pequeño, en este caso he optado por acortar la escala del eje y, para permitir la comparación entre los valores de los distintos años. Para aportar más información, el tamaño del punto es proporcional al número de películas de ese año, que ayuda también a valorar mejor las notas. También se destacan algunos valores, mostrandose la etiqueta del año sobre ellos y con un tono más oscuro. El gráfico es interactivo, por lo que al pasar el cursor por cada punto, se indica el número de películas de cada año presesntes en el dataset y también la película mejor valorada ese año y su nota. Durante el procesamiento, se eliminaron los años con pocas películas que pudieran tener una valoración media no representativa. <br>
 Este gráfico se ha realizado con DataWrapper.<br>
 <iframe title="Valoración media de las películas por año" aria-label="Scatter Plot" id="datawrapper-chart-LpjDI" src="https://datawrapper.dwcdn.net/LpjDI/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="375" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
 </script><br>
-
+<br>
 Para ver en el navegador: <a href="https://datawrapper.dwcdn.net/LpjDI/2/">https://datawrapper.dwcdn.net/LpjDI/2/</a><br>
+<br>
+La tercera visualización muestra los boxplots de las valoraciones de las películas para las 5 principales productoras. Se representan los 5 boxplots en el mismo gráfico, lo que permite la comparación entre productoras. Este gráfico muestra las principales variables estadísticas de las notas que reciben sus películas: la nota mediana, los cuartíles, máximo y mínimo. También sirve para detectar outliers, que en este caso serían películas que recibieron una nota inusualmente alta o baja, muy lejana al resto. He mantenido el mismo color para todas las productoras, ya que no hay diferencia entre ellas. Las etiquetas las he tenido que rotar para que se pudieran leer cómodamente. Durante el procesamiento, se seleccionaron las 5 productoras más importantes.<br>
+
+Este gráfico se ha realizado con Python y el módulo seaborn en un cuaderno de Google Colab.<br>
+
+<a href="https://drive.google.com/file/d/1WCdd95mswaDMYs_XGTpyQQlKgJ3l8c7N/view?usp=sharing">https://drive.google.com/file/d/1WCdd95mswaDMYs_XGTpyQQlKgJ3l8c7N/view?usp=sharing</a><br>
 
 
-
+<h2>Conclusiones </h2>
+Se han mostrado tres visualizaciones que han aportado conocimiento y han ayudado a responder a la pregunta propuesta:<br>
+1. Se observó que las películas mejor valoradas son los documentales, las biográficas y los westerns. Por el contrario, las peor valoradas son las de terror, ciencia-ficción y fantasia.<br>
+2. Se ha creado una visualización interactiva para ver la evolución de las películas a lo largo del tiempo, en el que se ve que las películas antiguas, anteriores a 1980 son en general más valoradas. Los últimos años, posiblemente también por producirse más películas, tienen una nota media bastante homogénea. También se destaca el año 2020, como un mal año también en cuánto al nivel de las películas.
+3. La última visualización permite comparar las películas de las 5 productoras más importantes. En ella, destaca Columbia al tener la caja más elevada que el resto, aunque las mejores películas parecen de Universal. También se aprecian algunos outliers, normalmente por debajo, que señalan los proyectos más sangrantes de cada compañia.
